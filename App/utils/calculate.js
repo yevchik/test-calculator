@@ -7,12 +7,12 @@
     }else if (action === 'mr') {
       return {
         ...values,
-        dispValue: values.memory
+        dispValue: `${values.memory}`
       }
     }else if (action === 'm-') {
       return {
         ...values,
-        memory: values.memory - values.dispValue
+        memory: `${values.memory - values.dispValue}`
       }
     }else if (action === 'm+') {
       return {
@@ -26,7 +26,7 @@
     if (action === '+') {
         return {
             ...values,
-            dispValue: values.oldValue + values.dispValue,
+            dispValue: `${(values.oldValue/1)+(values.dispValue/1)}`,
             oldValue:null,
             symbol: null,
         }
@@ -34,7 +34,7 @@
     if (action === '-') {
         return {
             ...values,
-            dispValue: values.oldValue - values.dispValue,
+            dispValue: `${values.oldValue - values.dispValue}`,
             oldValue:null,
             symbol: null,
         }
@@ -42,7 +42,7 @@
     if (action === '*') {
         return {
             ...values,
-            dispValue: values.oldValue * values.dispValue,
+            dispValue: `${values.oldValue * values.dispValue}`,
             oldValue:null,
             symbol: null,
         }
@@ -50,7 +50,7 @@
     if (action === '/') {
         return {
             ...values,
-            dispValue: values.oldValue / values.dispValue,
+            dispValue: `${values.oldValue / values.dispValue}`,
             oldValue:null,
             symbol: null,
         }
@@ -58,7 +58,7 @@
     if (action === '%') {
         return {
             ...values,
-            dispValue: values.oldValue/100 * values.dispValue,
+            dispValue: `${values.oldValue/100 * values.dispValue}`,
             oldValue:null,
             symbol: null,
         }
